@@ -90,36 +90,26 @@
       <a href="https://www.twitch.tv/rulito619" target="_blank">Twitch</a>
     </div>
 
-    <!-- Objetivos -->
+    <!-- Objetivo -->
     <div class="goal-container">
-      <h2>Objetivos de Donaciones</h2>
+      <h2>Objetivo de Donaciones</h2>
 
-      <!-- Primer objetivo -->
+      <!-- Único objetivo -->
       <div class="goal">
-        <p><strong>Comprar una mejor cámara ($200):</strong></p>
+        <p><strong>Primer objetivo ($100):</strong></p>
         <div class="progress-bar">
-          <div class="progress" id="goal1"></div>
-        </div>
-      </div>
-
-      <!-- Segundo objetivo -->
-      <div class="goal">
-        <p><strong>Actualizar el setup ($500):</strong></p>
-        <div class="progress-bar">
-          <div class="progress" id="goal2"></div>
+          <div class="progress" id="goal"></div>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    // Aquí puedes actualizar el progreso manualmente
-    const goal1Progress = 50; // Progreso en porcentaje (ej. 50%)
-    const goal2Progress = 25; // Progreso en porcentaje (ej. 25%)
+    // Progreso inicial del objetivo (en porcentaje)
+    const goalProgress = 0; // Cambia este valor según el progreso actual (ej. 25%)
 
-    // Actualizar barras de progreso
-    document.getElementById('goal1').style.width = goal1Progress + '%';
-    document.getElementById('goal2').style.width = goal2Progress + '%';
+    // Actualizar barra de progreso
+    document.getElementById('goal').style.width = goalProgress + '%';
   </script>
 </body>
 </html>
