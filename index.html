@@ -106,17 +106,17 @@
     // Función para obtener el progreso desde el backend
     async function fetchProgress() {
       try {
-        const response = await fetch("https://tu-servidor.com/progress"); // Cambia por tu URL de backend
+        const response = await fetch("http://free.whost.es:13438/progress"); // URL de tu backend
         const data = await response.json();
 
         // Calcular porcentaje de progreso
-        const progressPercentage = (data.currentAmount / data.goalAmount) * 100;
+        const progressPercentage = (data.progress / data.goal) * 100;
 
         // Actualizar barra de progreso
         document.getElementById("goal").style.width = progressPercentage + "%";
 
         // Actualizar texto del objetivo
-        document.getElementById("goal-text").innerText = `$${data.currentAmount} de $${data.goalAmount}`;
+        document.getElementById("goal-text").innerText = `$${data.progress} de $${data.goal}`;
       } catch (error) {
         console.error("Error obteniendo el progreso:", error);
       }
