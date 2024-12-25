@@ -75,7 +75,7 @@
 <body>
   <div class="container">
     <div class="logo">
-      <img src="09f0bbe5-1a9f-4df3-8b05-695f242cff97.jpg" alt="Rulito619">
+      <img src="logo_bulito619.jpg" alt="Rulito619">
     </div>
     <h1>Apoya a Rulito619</h1>
     <p>Tu apoyo hace la diferencia. ¡Gracias por ser parte de la comunidad!</p>
@@ -93,10 +93,8 @@
     <!-- Objetivo -->
     <div class="goal-container">
       <h2>Objetivo de Donaciones</h2>
-
-      <!-- Único objetivo -->
       <div class="goal">
-        <p><strong>PC gamer ($300):</strong></p>
+        <p id="goal-text">$0 de $100</p>
         <div class="progress-bar">
           <div class="progress" id="goal"></div>
         </div>
@@ -105,11 +103,27 @@
   </div>
 
   <script>
-    // Progreso inicial del objetivo (en porcentaje)
-    const goalProgress = 0; // Cambia este valor según el progreso actual (ej. 25%)
+    // Función para obtener el progreso desde el backend
+    async function fetchProgress() {
+      try {
+        const response = await fetch("https://tu-servidor.com/progress"); // Cambia por tu URL de backend
+        const data = await response.json();
 
-    // Actualizar barra de progreso
-    document.getElementById('goal').style.width = goalProgress + '%';
+        // Calcular porcentaje de progreso
+        const progressPercentage = (data.currentAmount / data.goalAmount) * 100;
+
+        // Actualizar barra de progreso
+        document.getElementById("goal").style.width = progressPercentage + "%";
+
+        // Actualizar texto del objetivo
+        document.getElementById("goal-text").innerText = `$${data.currentAmount} de $${data.goalAmount}`;
+      } catch (error) {
+        console.error("Error obteniendo el progreso:", error);
+      }
+    }
+
+    // Llamar a la función al cargar la página
+    fetchProgress();
   </script>
 </body>
 </html>
