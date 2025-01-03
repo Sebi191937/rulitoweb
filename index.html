@@ -1,176 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apoya a Rulito619</title>
+  <meta name="description" content="Página oficial de Rulito619, streamer en crecimiento. Conoce más sobre su contenido, apóyalo y disfruta de transmisiones emocionantes.">
+  <title>Rulito619 - Streamer Oficial</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #0a0a0a;
-      color: white;
       margin: 0;
       padding: 0;
+      background: #f4f4f9;
     }
-    .container {
-      margin-top: 50px;
-      padding: 20px;
+    header {
+      background: #1e90ff;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
     }
-    .logo img {
-      width: 150px;
-      border-radius: 50%;
-    }
-    h1 {
-      color: #f39c12;
-    }
-    p {
-      color: #ecf0f1;
-    }
-    .donate-button {
-      padding: 15px 30px;
-      font-size: 18px;
-      color: white;
-      background-color: #e74c3c;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .donate-button:hover {
-      background-color: #c0392b;
-    }
-    .social-buttons a {
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 18px;
-      color: #3498db;
-    }
-    .social-buttons a:hover {
-      color: #2980b9;
-    }
-    .goal-container {
-      margin: 30px auto;
-      text-align: left;
-      width: 80%;
-      max-width: 400px;
-    }
-    .goal {
-      margin: 20px 0;
-    }
-    .progress-bar {
-      background-color: #444;
-      border-radius: 20px;
-      overflow: hidden;
-      height: 25px;
-      margin-top: 5px;
-    }
-    .progress {
-      height: 100%;
-      width: 0;
-      background-color: #f39c12;
-      transition: width 0.5s;
-    }
-    .navbar {
+    nav {
+      background: #333;
+      color: #fff;
       display: flex;
       justify-content: center;
-      background-color: #222;
-      padding: 10px 0;
+      gap: 1rem;
+      padding: 0.5rem;
     }
-    .navbar a {
-      color: white;
+    nav a {
+      color: #fff;
       text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
-      padding: 5px 10px;
+      font-weight: bold;
     }
-    .navbar a:hover {
-      background-color: #444;
-      border-radius: 5px;
+    main {
+      max-width: 800px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    .section {
-      display: none;
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
     }
-    .section.active {
-      display: block;
+    .adsense {
+      margin: 1rem 0;
+      text-align: center;
     }
   </style>
-  <!-- Integración de AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9959578352995639"
-     crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="navbar">
-    <a href="#" onclick="showSection('home')">Inicio</a>
-    <a href="#" onclick="showSection('videos')">Videos</a>
-  </div>
+  <header>
+    <h1>Bienvenido a la página oficial de Rulito619</h1>
+    <p>Apoya a tu streamer favorito y disfruta de su contenido</p>
+  </header>
 
-  <div id="home" class="section active">
-    <div class="container">
-      <div class="logo">
-        <img src="logo_bulito619.jpg" alt="Rulito619">
-      </div>
-      <h1>Apoya a Rulito619</h1>
-      <p>Tu apoyo hace la diferencia. ¡Gracias por ser parte de la comunidad!</p>
-      <form action="https://www.paypal.me/rulito619" method="post" target="_blank">
-        <input type="hidden" name="hosted_button_id" value="TU_CODIGO_DE_PAYPAL">
-        <button class="donate-button">Donar con PayPal</button>
-      </form>
-      <div class="social-buttons">
-        <a href="https://www.tiktok.com/@rulito619?_t=8sV30PGacTd&_r=1" target="_blank">TikTok</a>
-        <a href="https://www.twitch.tv/rulito619" target="_blank">Twitch</a>
-      </div>
-      <div class="goal-container">
-        <h2>Objetivo de Donaciones</h2>
-        <div class="goal">
-          <p><strong>Primer objetivo ($100):</strong></p>
-          <div class="progress-bar">
-            <div class="progress" id="goal"></div>
-          </div>
-        </div>
-      </div>
-      <!-- Anuncio de AdSense en la sección de Inicio -->
-      <ins class="adsbygoogle"
-           style="display:block; text-align:center;"
-           data-ad-layout="in-article"
-           data-ad-format="fluid"
-           data-ad-client="ca-pub-9959578352995639"
-           data-ad-slot="2102907430"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-  </div>
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#streams">Transmisiones</a>
+    <a href="#support">Apoya</a>
+  </nav>
 
-  <div id="videos" class="section">
-    <div class="container">
-      <h1>Anuncios de Apoyo</h1>
-      <p>Al ver estos anuncios, estás ayudando a Rulito619.</p>
-      <!-- Anuncio de AdSense en la sección de Videos -->
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy Rulito619, un streamer apasionado por los videojuegos y el entretenimiento. Únete a mis transmisiones en Twitch y sé parte de esta gran comunidad.</p>
+    </section>
+
+    <div class="adsense">
+      <!-- Bloque de Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
            style="display:block"
-           data-ad-client="ca-pub-9959578352995639"
-           data-ad-slot="1464882685"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXX"  <!-- Reemplaza con tu ID de AdSense -->
+           data-ad-slot="1234567890"  <!-- Reemplaza con tu slot -->
+           data-ad-format="auto"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-  </div>
 
-  <script>
-    // Cambiar entre secciones
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(sectionId).classList.add('active');
-    }
+    <section id="streams">
+      <h2>Transmisiones</h2>
+      <p>Mira mis transmisiones en vivo en Twitch, todos los días a las 8 PM (hora local).</p>
+      <p><a href="https://twitch.tv/rulito619" target="_blank">Ir a mi Twitch</a></p>
+    </section>
 
-    // Progreso inicial del objetivo
-    const goalProgress = 0; // Cambia este valor según el progreso actual
-    document.getElementById('goal').style.width = goalProgress + '%';
-  </script>
+    <section id="support">
+      <h2>Apóyame</h2>
+      <p>Haz una donación o compártelo con tus amigos. ¡Todo apoyo es bienvenido!</p>
+      <p><a href="https://paypal.me/rulito619" target="_blank">Donar con PayPal</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rulito619. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
